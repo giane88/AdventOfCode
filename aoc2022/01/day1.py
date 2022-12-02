@@ -18,5 +18,5 @@ for line in lines:
 calories4Elf.sort(reverse=True)
 
 print(f'Solution 1 {calories4Elf[0]}')
-print(f'Solution 1 {np.sum(calories4Elf[:3])}')
+print(f'Solution 2 {np.sum(calories4Elf[:3])}')
 
