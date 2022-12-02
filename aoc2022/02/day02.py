@@ -32,3 +32,25 @@ for line in lines:
     
 print(f'Solution 1: {points}')
 
+
+"""
+Soluzione alla parte 2
+"""
+points=0
+for line in lines:
+    opponent, result = line.split()
+
+    if result == "X":
+        points += pointsLose
+        for (opMove, myMove) in lose:
+            if opponent == opMove : points += pointsFigure[myMove]
+    if result == "Y":
+        points += pointsDraw
+        for (opMove, myMove) in draw:
+            if opponent == opMove : points += pointsFigure[myMove]
+    if result == "Z":
+        points += pointsWin
+        for (opMove, myMove) in win:
+            if opponent == opMove : points += pointsFigure[myMove]
+
+print(f'Solution 2: {points}')
