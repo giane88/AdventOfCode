@@ -22,10 +22,18 @@ url = f'https://adventofcode.com/{year}/day/{day}/input'
 session = requests.Session()
 resp = session.get(url,cookies=headers)
 
-filePath = f'{path.parent.absolute()}/aoc2022/{day:02}/day{day:02}.txt'
-print(f'File saved in {filePath}')
-in_file = open(filePath,'w')
+inputFile = f'{path.parent.absolute()}/aoc2022/{day:02}/day{day:02}.txt'
+print(f'File saved in {inputFile}')
+in_file = open(inputFile,'w')
 in_file.write(resp.text)
 in_file.close()
+
+testFile = f'{path.parent.absolute()}/aoc2022/{day:02}/test.txt'
+rulesFile = f'{path.parent.absolute()}/aoc2022/{day:02}/rules.md'
+pyFile = f'{path.parent.absolute()}/aoc2022/{day:02}/day{day:02}.py'
+
+open(testFile, 'x')
+open(rulesFile,'x')
+open(pyFile,'x')
 
 print('File correctly saved')
