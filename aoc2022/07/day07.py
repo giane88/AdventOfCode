@@ -39,4 +39,4 @@ small_directory_size = 30000000 - free_space
 print(f'Small directory: {small_directory_size}')
 
 min_dir_size = min([x for x in sizes.values() if x > small_directory_size])
-print(f'Soluzione 2: {min_dir_size})
+print(f'Soluzione 2: {min_dir_size}')
