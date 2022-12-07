@@ -32,5 +32,11 @@ for value in sizes.values():
     if value < 100000:
         small_size += value
 
-print(small_size)
+print(f'Soluzione 1 {small_size}')
+free_space = 70000000 - sizes[Path('/')]
+print(f'Free space: {free_space}')
+small_directory_size = 30000000 - free_space
+print(f'Small directory: {small_directory_size}')
 
+min_dir_size = min([x for x in sizes.values() if x > small_directory_size])
+print(f'Soluzione 2: {min_dir_size})
